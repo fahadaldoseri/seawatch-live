@@ -1,0 +1,164 @@
+{
+ "routes": [
+  {
+   "path": "/",
+   "title": "الرئيسية والأرشيف"
+  },
+  {
+   "path": "/reports/2026-11-07.html",
+   "title": "تقرير 07/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-06.html",
+   "title": "تقرير 06/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-05.html",
+   "title": "تقرير 05/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-04.html",
+   "title": "تقرير 04/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-03.html",
+   "title": "تقرير 03/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-02.html",
+   "title": "تقرير 02/11/2026"
+  },
+  {
+   "path": "/reports/2026-11-01.html",
+   "title": "تقرير 01/11/2026"
+  },
+  {
+   "path": "/reports/2026-10-31.html",
+   "title": "تقرير 31 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-30.html",
+   "title": "تقرير 30 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-29.html",
+   "title": "تقرير 29 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-28.html",
+   "title": "تقرير 28 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-27.html",
+   "title": "تقرير 27 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-26.html",
+   "title": "تقرير 26 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-25.html",
+   "title": "تقرير 25 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-24.html",
+   "title": "تقرير 24 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-23.html",
+   "title": "تقرير 23 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-22.html",
+   "title": "تقرير 22 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-21.html",
+   "title": "تقرير 21 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-20.html",
+   "title": "تقرير 20 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-19.html",
+   "title": "تقرير 19 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-18.html",
+   "title": "تقرير 18 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-17.html",
+   "title": "تقرير 17 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-16.html",
+   "title": "تقرير 16 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-15.html",
+   "title": "تقرير 15 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-14.html",
+   "title": "تقرير 14 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-13.html",
+   "title": "تقرير 13 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/2026-10-12.html",
+   "title": "تقرير 12 أكتوبر 2026"
+  },
+  {
+   "path": "/reports/:date",
+   "title": "تقرير يومي"
+  },
+  {
+   "path": "/reports/monthly-2026-10.html",
+   "title": "اللوحة الشهرية"
+  },
+  {
+   "path": "/reports/cumulative-2026.html",
+   "title": "السجل التراكمي"
+  },
+  {
+   "path": "/sources.html",
+   "title": "المصادر والمراجع"
+  },
+  {
+   "path": "/additions.html",
+   "title": "إضافات"
+  },
+  {
+   "path": "/reports/special.html",
+   "title": "التقارير الخاصة"
+  },
+  {
+   "path": "/reports/special-2026-10-17-Jubail-incidents.html",
+   "title": "تقرير خاص — واقعتا استهداف ناقلتين شمال شرق الجبيل"
+  },
+  {
+   "path": "/reports/special-exposure-denominator-2026-10-16.html",
+   "title": "مقام التعرّض بحسب الانتماء — هل ارتفاع إصابات الأسطول الإماراتي استهداف أم تعرّض؟"
+  },
+  {
+   "path": "/reports/special-ach-hormuz-targeting-v3-2026-10-16.html",
+   "title": "مصفوفة ACH — نسخة 3: ترجيح كمّي موزون لنمط الاستهداف في مضيق هرمز"
+  },
+  {
+   "path": "/reports/special-ach-hormuz-targeting-2026-10-16.html",
+   "title": "مصفوفة ACH — نسخة 2: نمط الاستهداف في مضيق هرمز بعد استكمال الأعلام والمشغّلين ومقام الاحتمال"
+  },
+  {
+   "path": "/reports/special-gfs-pride-giselle-2026-10-15.html",
+   "title": "إصابة سفينتي حاويات في مضيق هرمز: «GFS PRIDE» و«GFS GISELLE»"
+  },
+  {
+   "path": "/reports/special-2026-10-15-GFS.html",
+   "title": "إصابة سفينتي حاويات في مضيق هرمز: «GFS PRIDE» و«GFS GISELLE»"
+  }
+ ]
+}

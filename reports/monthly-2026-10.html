@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحة المؤشرات الشهرية — أمن الملاحة 2026</title>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<style>
+:root{--bg:#050a12;--panel:#0c1626;--line:#1d2e4a;--ink:#e9f0f9;--ink2:#b9c8dc;--muted:#7e93ab;--accent:#22c3b6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif;line-height:1.9}
+.wrap{max-width:980px;margin:0 auto;padding:38px 20px 70px}
+h1{font-size:26px;margin:0 0 6px}h2{font-size:18px;color:var(--accent);margin:30px 0 12px}
+p.lede{color:var(--muted);margin:0 0 20px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.k b{display:block;font-size:24px;font-family:"IBM Plex Mono",monospace}
+.k span{color:var(--muted);font-size:13px}
+.row{display:grid;grid-template-columns:150px 1fr 54px;gap:12px;align-items:center;margin:8px 0}
+.lbl{font-size:13.5px;color:var(--ink2)}
+.bar{height:9px;background:#101d31;border-radius:99px;overflow:hidden;position:relative}
+/* خط أساس مشترك: تدريج عند 25% و50% و75% من أعلى قيمة */
+.bar::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 24.6%,rgba(255,255,255,.16) 24.6%,rgba(255,255,255,.16) 25.2%,transparent 25.2%,transparent 49.7%,rgba(255,255,255,.16) 49.7%,rgba(255,255,255,.16) 50.3%,transparent 50.3%,transparent 74.8%,rgba(255,255,255,.16) 74.8%,rgba(255,255,255,.16) 75.4%,transparent 75.4%);pointer-events:none}
+.bar i{display:block;height:100%;background:var(--accent)}
+.bar.alt i{background:#4d9dff}
+.num{font-family:"IBM Plex Mono",monospace;font-size:13px;text-align:end}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);font-size:14px;text-align:start}
+th{background:#0f1d33;color:var(--ink2);font-weight:600}
+td.num{text-align:end;font-family:"IBM Plex Mono",monospace}
+.foot{color:var(--muted);font-size:13px;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+/* المظهر النهاري: كانت الصفحة تبقى داكنة مع شريط فاتح */
+body.daylight{--bg:#eef3f9;--panel:#ffffff;--line:#d3dded;--ink:#0d1a2b;--ink2:#33475e;--muted:#4f657c;--accent:#0b7a72}
+body.daylight .bar{background:#dbe5f0}
+body.daylight th{background:#eef3f9}
+body.daylight .bar.alt i{background:#1d5fa8}
+body.daylight .bar::after{filter:invert(1);opacity:.35}
+</style><style>
+:root{--sn-bg:#040810;--sn-panel:#0b1524;--sn-line:#1b2b45;--sn-ink:#e9f0f9;--sn-ink2:#b9c8dc;
+--sn-muted:#7f95ae;--sn-accent:#22c3b6;--sn-accent-ink:#04120f}
+html{scroll-behavior:smooth}
+body.daylight{--sn-bg:#eef3f9;--sn-panel:#ffffff;--sn-line:#d3dded;--sn-ink:#0d1a2b;--sn-ink2:#33475e;
+--sn-muted:#4f657c;--sn-accent:#0b7a72;--sn-accent-ink:#ffffff}
+.site-nav{position:sticky;top:0;z-index:60;background:var(--sn-bg);border-bottom:1px solid var(--sn-line);
+font-family:"IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif}
+.site-nav .sn-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:9px 20px;flex-wrap:wrap}
+.site-nav.is-compact .sn-inner{padding:3px 20px;gap:8px}
+.site-nav.is-compact .sn-name em{display:none}
+.site-nav.is-compact .sn-mark{width:22px;height:22px}
+.site-nav.is-compact .sn-mark svg{width:13px;height:13px}
+.site-nav.is-compact .sn-links{flex-wrap:nowrap;overflow-x:auto}
+.site-nav.is-compact .sn-links a{padding:4px 7px;min-height:26px;font-size:13px}
+.site-nav.is-compact{box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.site-nav a{color:var(--sn-ink2);text-decoration:none}
+.sn-brand{display:flex;align-items:center;gap:10px;color:var(--sn-ink)!important;font-weight:700}
+.sn-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;
+background:linear-gradient(150deg,var(--sn-accent),#0c8b83);color:#04120f}
+.sn-mark svg{width:17px;height:17px}
+.sn-name{display:flex;flex-direction:column;line-height:1.25}
+.sn-name em{font-style:normal;font-size:12.5px;font-weight:500;color:var(--sn-muted)}
+.sn-links{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+.sn-links a{padding:6px 8px;min-height:32px;display:inline-flex;align-items:center;border-radius:8px;font-size:13.5px;border:1px solid transparent}
+.sn-links a:hover{background:var(--sn-panel);border-color:var(--sn-line);color:var(--sn-ink)}
+.sn-links a[aria-current="page"]{background:var(--sn-panel);border-color:var(--sn-line);color:var(--sn-ink);font-weight:600}
+.sn-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;min-width:0}
+.sn-scale{display:flex;flex:0 0 auto;border:1px solid var(--sn-line);border-radius:9px;overflow:hidden}
+.sn-scale button{background:transparent;border:0;color:var(--sn-ink2);padding:5px 8px;min-width:34px;min-height:32px;cursor:pointer;font:inherit;font-size:13px}
+.sn-scale button.on{background:var(--sn-accent);color:var(--sn-accent-ink);font-weight:700}
+.sn-tools button, .sn-tools a, .sn-scale button{min-height:44px;min-width:44px}
+.sn-theme{background:var(--sn-panel);border:1px solid var(--sn-line);color:var(--sn-ink2);
+border-radius:9px;padding:6px 11px;cursor:pointer;font:inherit;font-size:13px}
+.sn-theme:hover{color:var(--sn-ink)}
+.sn-skip{position:absolute;inset-inline-start:12px;top:-80px;z-index:70;background:var(--sn-accent);color:var(--sn-accent-ink)!important;
+padding:9px 16px;border-radius:9px;font-weight:700;font-size:14px}
+.sn-skip:focus{top:8px;outline:2px solid var(--sn-ink);outline-offset:2px}
+.sn-print{background:var(--sn-accent);color:var(--sn-accent-ink);border-color:transparent;font-weight:700}
+.sn-print:hover{color:var(--sn-accent-ink);filter:brightness(1.08)}
+.sn-print-disabled{background:var(--sn-panel);color:var(--sn-muted);border-color:var(--sn-line);cursor:not-allowed}
+.sn-foot{margin-top:44px;border-top:1px solid var(--sn-line);background:var(--sn-bg);
+font-family:"IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif}
+.sn-foot .sf-inner{max-width:1180px;margin:0 auto;padding:20px;color:var(--sn-muted);font-size:13px;
+display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+.sn-foot a{color:var(--sn-ink2);display:inline-block;padding:4px 2px;min-height:24px}
+body.daylight .topbar{background:#ffffff!important;border-bottom-color:#d3dded!important}
+body.daylight .brand-title,body.daylight .brand-sub{color:#0d1a2b}
+@media print{.site-nav,.sn-foot{display:none!important}}
+
+/* قائمة الجوال — تضغط شريطي الموقع والصفحة إلى ارتفاع صغير */
+.sn-menu{display:none}
+/* سطح المكتب: الروابط والأدوات في صف واحد بجانب الشعار (كانت تتراصّ صفين داخل اللوحة) */
+@media (min-width:1041px){
+  .sn-panel{display:flex;align-items:center;gap:12px;flex:1 1 auto;min-width:0}
+  .sn-panel .sn-links{margin-inline-start:0}
+  .sn-panel .sn-tools{margin-inline-start:auto}
+}
+/* عرض متوسط (لوحي): يبقى الشريط صفًّا واحدًا حتى مع زر الطباعة */
+@media (min-width:1041px) and (max-width:1180px){
+  .sn-name em{display:none}
+  .site-nav .sn-inner{gap:8px;padding-inline:14px}
+  .sn-links{gap:0}
+  .sn-links a{padding:6px 5px;font-size:13px}
+  .sn-panel{gap:6px}
+  .sn-tools{gap:6px}
+  .sn-theme{padding:6px 8px}
+}
+@media (max-width:1040px){
+  .site-nav .sn-inner{flex-wrap:nowrap;padding:8px 14px;gap:10px;position:relative}
+  .sn-name em{display:none}
+  .sn-menu{
+    display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto;
+    min-height:44px;padding:0 14px;border-radius:10px;cursor:pointer;
+    background:var(--sn-panel);border:1px solid var(--sn-line);color:var(--sn-ink);font:inherit;font-size:14px
+  }
+  .sn-menu-icon,.sn-menu-icon::before,.sn-menu-icon::after{
+    display:block;width:16px;height:2px;background:currentColor;border-radius:2px;position:relative;
+    transition:transform .2s ease,background-color .2s ease
+  }
+  .sn-menu-icon::before,.sn-menu-icon::after{content:"";position:absolute;inset-inline:0}
+  .sn-menu-icon::before{top:-5px}
+  .sn-menu-icon::after{top:5px}
+  .site-nav.open .sn-menu-icon{background:transparent}
+  .site-nav.open .sn-menu-icon::before{top:0;transform:rotate(45deg)}
+  .site-nav.open .sn-menu-icon::after{top:0;transform:rotate(-45deg)}
+  .sn-panel{
+    display:none;position:absolute;inset-inline:0;top:100%;
+    background:var(--sn-bg);border-bottom:1px solid var(--sn-line);padding:10px 14px 16px;
+    flex-direction:column;gap:12px;box-shadow:0 0 0 100vh rgba(0,0,0,.45);z-index:5
+  }
+  .site-nav.open .sn-panel{display:flex}
+  .site-nav .sn-links{flex-direction:column;margin:0;gap:2px}
+  .site-nav .sn-links a{min-height:44px;display:flex;align-items:center}
+  .topbar-inner{flex-wrap:nowrap !important;padding:6px 14px !important;gap:8px !important}
+  .topbar .brand-sub,.topbar .tb-meta .chip,.topbar .brand-mark{display:none}
+  .topbar .brand-title{font-size:13.5px;line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .topbar .tb-meta{display:flex;gap:6px;flex:0 0 auto}
+  .topbar .btn{min-height:40px;padding:6px 10px}
+}
+  .topbar .btn{min-width:44px;display:inline-flex;align-items:center;justify-content:center}
+
+/* أهداف لمس على سطح المكتب — الشاشة فقط (قياس 2026-10-29: 34×35.3 و93.9×39.3) */
+@media screen{
+  .topbar a, .topbar button, .topbar .btn, .sn-brand, .sn-links a,
+  .sc-toggle, .sc-jump a, .chip, .chip a, .tb-meta .btn,
+  .sn-tools button, .sn-tools a, .sn-scale button, .sc-more a,
+  .sc-all button, details.sc-basis summary, .sf-inner a,
+  .sx-card a, .sx-name a, .sx-links a, .sx-row a, .sx-src a,
+  .sx-ref a, .sx-refs a, .src-ref a, .open-report a, a.btn-link, .sup-banner a{
+    min-height:44px; min-width:44px; display:inline-flex; align-items:center;
+    justify-content:center; box-sizing:border-box;
+  }
+}
+/* أهداف لمس وقص النص على الجوال — الشاشة فقط */
+@media screen and (max-width:820px){
+  a, button, [role="button"], summary {
+    min-height:44px !important;
+    min-width:44px !important;
+    display:inline-flex;
+    align-items:center;
+    box-sizing:border-box;
+  }
+  nav a, .sn-link, .sn-brand, .p-btn, .chip a, .sc-jump a,
+  button, summary, .sc-toggle {
+    min-height:44px !important;
+    min-width:44px !important;
+    padding-block:8px;
+  }
+  .sc-toggle, .sc-toggle.no-print {
+    width:44px;
+    height:44px;
+    min-width:44px;
+  }
+  td a, th a, table a, .src a, .st a {
+    min-height:44px !important;
+    min-width:44px !important;
+    display:inline-flex;
+    align-items:center;
+    box-sizing:border-box;
+    padding-block:8px;
+    vertical-align:middle;
+  }
+  .sc-peek, .sc-peek span, .sc-kn, .sc-gist, .sc-sum,
+  [class*="clamp"], [class*="gist"] {
+    -webkit-line-clamp:unset !important;
+    display:block !important;
+    max-height:none !important;
+    overflow:visible !important;
+    white-space:normal !important;
+    text-overflow:clip !important;
+  }
+  nav.sc-jump { -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 26px), transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 26px), transparent 100%); }
+}
+html{scroll-padding-top:calc(var(--nav-h, 60px) + var(--bar-h, 0px) + 12px);scroll-padding-bottom:80px}
+section.doc{scroll-margin-top:0 !important}
+
+.sn-lang{display:inline-flex;flex:0 0 auto;border:1px solid var(--sn-line);border-radius:9px;overflow:hidden}
+.sn-lang button{background:transparent;border:0;color:var(--sn-ink2);padding:6px 11px;min-height:44px;min-width:44px;
+cursor:pointer;font:inherit;font-size:12.5px;font-weight:700}
+.sn-lang button.on{background:var(--sn-accent);color:var(--sn-accent-ink)}
+.sn-lang button:hover{color:var(--sn-ink)}
+.sn-lang-note{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:60;background:var(--sn-panel);
+border:1px solid var(--sn-line);color:var(--sn-ink);border-radius:10px;padding:10px 14px;font-size:13px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:90vw;text-align:center}
+
+/* اتجاه النصوص اللاتينية والإحداثيات — يمنع انقلابها في السياق العربي */
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+/* ألوان الشارات في الوضع النهاري (نفس منطق ألوان نسخة الطباعة) */
+@media screen{
+  body.daylight .st-badge.s-stable,body.daylight .chg.c-closed .chg-tag,body.daylight .conf.c-high,
+  body.daylight .tag.t-confirm{color:#14603f;background:#edfaf3;border-color:#7cc4a0}
+  body.daylight .st-badge.s-active,body.daylight .kstrip.k-confirm,body.daylight .cls-banner.c-sensitive
+    {color:#7a1d1a;background:#fff1f0;border-color:#c77973}
+  body.daylight .conf.c-med,body.daylight .kstrip.k-suspect,body.daylight .chg.c-reclassified .chg-tag,
+  body.daylight .cls-banner.c-restricted,body.daylight .tag.t-suspect{color:#7c5000;background:#fff7e6;border-color:#c9a24f}
+  body.daylight .conf.c-low,body.daylight .kstrip.k-inter,body.daylight .chg.c-new .chg-tag
+    {color:#1d4f87;background:#edf4ff;border-color:#8bb1dd}
+  body.daylight .chg.c-ongoing .chg-tag{color:#31465c;background:#f6f8fb;border-color:#b8c4d1}
+  body.daylight .ev-code{color:#31465c;background:#f2f5f9;border-color:#c4d0dd}
+}
+
+/* رقم المعلّم: نص داكن على معلّم فاتح، ومقلوب في الوضع النهاري */
+body:not(.daylight) .lg-num{color:#04120f}
+body.daylight .lg-num{color:#ffffff}
+
+/* بطاقات الجوال للجداول — البند المعتمد 21 أكتوبر 2026 */
+@media (max-width:560px){
+  table.cardified{display:block;border:0;background:transparent;border-radius:0}
+  table.cardified.cardified{width:100%;max-width:100%;min-width:0}
+  table.cardified thead{display:none}
+  table.cardified tbody{display:block;max-width:100%}
+  table.cardified tr{display:block;max-width:100%;box-sizing:border-box;background:var(--panel);
+    border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin:0 0 10px}
+  table.cardified td{display:grid;grid-template-columns:minmax(72px,auto) minmax(0,1fr);gap:8px;
+    border:0;padding:5px 0;align-items:baseline;text-align:start;
+    overflow-wrap:anywhere;word-break:break-word;min-width:0}
+  table.cardified td::before{content:attr(data-label);color:var(--muted);font-size:12.5px;font-weight:600}
+  table.cardified td:empty{display:none}
+  /* ك-336: النص الإنجليزي الطويل (شرائح الحالة والتسميات) كان يتجاوز عرض بطاقة الجوال 16–31% */
+  table.cardified td > *,table.cardified .st-badge{white-space:normal;overflow-wrap:anywhere;
+    word-break:break-word;min-width:0;max-width:100%}
+  .tbl-wrap:has(table.cardified),.tbl-scroll:has(table.cardified){overflow:visible;border:0}
+  .tbl-hint{display:none}
+}
+/* بانر النسخة المستبدلة — البند المعتمد 21 أكتوبر 2026 */
+.sup-banner{margin:0 0 20px;padding:12px 16px;border:1px solid #c9a24f;border-radius:10px;
+  background:#2a2210;color:#ffd88a;font-size:14px}
+body.daylight .sup-banner{background:#fff7e6;color:#7c5000;border-color:#c9a24f}
+.sup-banner a{color:inherit;font-weight:700;text-decoration:underline}
+.sp-dim{opacity:.72}
+</style></head><body><nav class="site-nav no-print" aria-label="تنقل الموقع">
+  <a class="sn-skip" href="#" id="sn-skip" data-i18n="skip">الانتقال إلى المحتوى</a>
+  <div class="sn-inner">
+    <a class="sn-brand" href="/">
+      <span class="sn-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v6c0 4.4-2.9 7.6-7 9-4.1-1.4-7-4.6-7-9V6z"/><path d="M12 11.5v4"/><path d="M9.6 13.2h4.8"/></svg></span>
+      <span class="sn-name">مركز الوعي بالمجال البحري <em>تقارير أمن الملاحة — مملكة البحرين</em></span>
+    </a>
+    <button type="button" class="sn-menu no-print" aria-expanded="false" aria-controls="sn-panel">
+      <span class="sn-menu-icon" aria-hidden="true"></span><span data-i18n="menu">القائمة</span>
+    </button>
+    <div class="sn-panel" id="sn-panel">
+    <div class="sn-links">
+      <a href="/" data-i18n="home">الرئيسية</a>
+      <a href="/reports/special.html" data-i18n="special">التقارير الخاصة</a>
+      <a href="/#archive" data-i18n="archive">الأرشيف</a>
+      <a href="/reports/monthly-2026-10.html" aria-current="page" data-i18n="monthly">اللوحة الشهرية</a>
+      <a href="/reports/cumulative-2026.html" data-i18n="cumulative">السجل التراكمي</a>
+      <a href="/sources.html" data-i18n="sources">المصادر والمراجع</a>
+      <a href="/additions.html" data-i18n="additions">إضافات</a>
+    </div>
+    <div class="sn-tools">
+      <div class="sn-lang" role="group" aria-label="اللغة / Language">
+        <button type="button" data-lang="ar" title="العربية" lang="ar">ع</button>
+        <button type="button" data-lang="en" title="English" lang="en">EN</button>
+      </div>
+      <div class="sn-scale" role="group" aria-label="حجم الخط" data-i18n-aria="scale">
+        <button type="button" data-scale="1" title="حجم عادي">أ</button>
+        <button type="button" data-scale="1.12" title="حجم أكبر">أ+</button>
+        <button type="button" data-scale="1.25" title="أكبر حجم">أ++</button>
+      </div>
+      <button type="button" class="sn-theme" id="sn-theme">المظهر</button>
+      
+    </div>
+    </div>
+  </div>
+</nav><script>
+(function(){try{
+var b=document.body;if(!b)return;
+var t=localStorage.getItem('mn-theme');if(t==='light')b.classList.add('daylight');
+/* لغة المستند تعلنها الصفحة نفسها (وسم lang + data-lang)؛ ولغة الشريط تتبع الصفحة أو تفضيل الزائر. */
+var lockE=document.documentElement.getAttribute('data-lang');
+if(lockE==='en'){b.classList.add('lang-en');}
+var s=parseFloat(localStorage.getItem('mn-scale')||'1');if(s&&s!==1)b.style.zoom=s;
+}catch(e){}})();
+</script><div class="wrap" role="main">
+<h1>لوحة المؤشرات الشهرية — أمن الملاحة 2026</h1>
+<p class="lede">لوحة مبنية من دفتر الأحداث التراكمي: 10 شهرًا، 557 سجلًا. لا تُقرأ الأعداد كهجمات مؤكدة.</p>
+<div class="kpis">
+<div class="k"><b class="bidi">557</b><span>إجمالي السجلات</span></div>
+<div class="k"><b class="bidi">10</b><span>الأشهر المغطاة</span></div>
+<div class="k"><b class="bidi">160</b><span>سجلات مضيق هرمز</span></div>
+<div class="k"><b class="bidi">163</b><span>أنواع تصنيف</span></div>
+</div>
+<h2>السجلات بحسب الشهر</h2><div class="row"><span class="lbl bidi">2026-02</span><span class="bar"><i style="width:1.7%"></i></span><span class="num bidi">4</span></div><div class="row"><span class="lbl bidi">2026-03</span><span class="bar"><i style="width:25.1%"></i></span><span class="num bidi">58</span></div><div class="row"><span class="lbl bidi">2026-04</span><span class="bar"><i style="width:15.6%"></i></span><span class="num bidi">36</span></div><div class="row"><span class="lbl bidi">2026-05</span><span class="bar"><i style="width:14.3%"></i></span><span class="num bidi">33</span></div><div class="row"><span class="lbl bidi">2026-06</span><span class="bar"><i style="width:13.4%"></i></span><span class="num bidi">31</span></div><div class="row"><span class="lbl bidi">2026-07</span><span class="bar"><i style="width:17.7%"></i></span><span class="num bidi">41</span></div><div class="row"><span class="lbl bidi">2026-08</span><span class="bar"><i style="width:17.3%"></i></span><span class="num bidi">40</span></div><div class="row"><span class="lbl bidi">2026-09</span><span class="bar"><i style="width:14.3%"></i></span><span class="num bidi">33</span></div><div class="row"><span class="lbl bidi">2026-10</span><span class="bar"><i style="width:100.0%"></i></span><span class="num bidi">231</span></div><div class="row"><span class="lbl bidi">2026-11</span><span class="bar"><i style="width:21.6%"></i></span><span class="num bidi">50</span></div>
+<h2>التوزيع الجغرافي</h2><div class="row"><span class="lbl">مواقع أخرى</span><span class="bar alt"><i style="width:100.0%"></i></span><span class="num bidi">285</span></div><div class="row"><span class="lbl">مضيق هرمز</span><span class="bar alt"><i style="width:56.1%"></i></span><span class="num bidi">160</span></div><div class="row"><span class="lbl">الخليج العربي</span><span class="bar alt"><i style="width:18.6%"></i></span><span class="num bidi">53</span></div><div class="row"><span class="lbl">خليج عُمان</span><span class="bar alt"><i style="width:6.0%"></i></span><span class="num bidi">17</span></div><div class="row"><span class="lbl">البحر الأحمر</span><span class="bar alt"><i style="width:5.6%"></i></span><span class="num bidi">16</span></div><div class="row"><span class="lbl">خليج عدن</span><span class="bar alt"><i style="width:5.6%"></i></span><span class="num bidi">16</span></div><div class="row"><span class="lbl">بحر العرب</span><span class="bar alt"><i style="width:2.5%"></i></span><span class="num bidi">7</span></div><div class="row"><span class="lbl">باب المندب</span><span class="bar alt"><i style="width:1.1%"></i></span><span class="num bidi">3</span></div>
+<h2>التصنيف</h2><p class="lede">تُعرض أعلى 10 تصنيفات من 163 تصنيفًا؛ والباقي (153) مجموعها 222 سجلًا.</p><table class="cardified"><thead><tr><th>التصنيف</th><th>العدد</th></tr></thead><tbody><tr><td data-label="التصنيف">imo_confirmed_incidents</td><td class="num bidi" data-label="العدد">122</td></tr><tr><td data-label="التصنيف">هجوم</td><td class="num bidi" data-label="العدد">39</td></tr><tr><td data-label="التصنيف">بلاغ رسمي</td><td class="num bidi" data-label="العدد">38</td></tr><tr><td data-label="التصنيف">غير مصنف</td><td class="num bidi" data-label="العدد">36</td></tr><tr><td data-label="التصنيف">نقل إعلامي</td><td class="num bidi" data-label="العدد">28</td></tr><tr><td data-label="التصنيف">رواية</td><td class="num bidi" data-label="العدد">17</td></tr><tr><td data-label="التصنيف">تقرير مهني</td><td class="num bidi" data-label="العدد">16</td></tr><tr><td data-label="التصنيف">نشاط مشبوه</td><td class="num bidi" data-label="العدد">15</td></tr><tr><td data-label="التصنيف">نقل مهني</td><td class="num bidi" data-label="العدد">15</td></tr><tr><td data-label="التصنيف">هجوم مؤكد</td><td class="num bidi" data-label="العدد">9</td></tr></tbody></table>
+<h2>درجة الثقة المسجلة</h2><table class="cardified"><thead><tr><th>المستوى</th><th>العدد</th></tr></thead><tbody><tr><td data-label="المستوى">عالية</td><td class="num bidi" data-label="العدد">291</td></tr><tr><td data-label="المستوى">متوسطة</td><td class="num bidi" data-label="العدد">172</td></tr><tr><td data-label="المستوى">منخفضة</td><td class="num bidi" data-label="العدد">94</td></tr></tbody></table>
+<div class="foot">المصدر: ledger.json — أُنشئت في 2026-11-07.</div>
+</div><footer class="sn-foot no-print">
+  <div class="sf-inner">
+    <span><span data-i18n-html="foot1">مركز الوعي بالمجال البحري — تقارير أمن الملاحة — مملكة البحرين</span> · لوحة مبنية من دفتر الأحداث التراكمي</span>
+    <span data-i18n-html="foot2">تُحدَّث الصفحات آليًا مع كل إصدار · <a href="/#archive">الأرشيف الكامل</a> · <a href="/feed.xml">تغذية الإصدارات</a></span>
+  </div>
+</footer><script>
+(function(){
+var LS=window.localStorage, body=document.body;
+function save(k,v){try{LS.setItem(k,v);}catch(e){}}
+var reportBtn=document.getElementById('btn-theme'), siteBtn=document.getElementById('sn-theme');
+// إزالة مستمع الزر الأصلي داخل التقرير بمضاعفة العقدة لمنع الازدواج
+if(reportBtn){var clone=reportBtn.cloneNode(true);reportBtn.parentNode.replaceChild(clone,reportBtn);reportBtn=clone;}
+function isLight(){return body.classList.contains('daylight');}
+function paint(){
+  paintLang();
+  document.querySelectorAll('[data-scale]').forEach(function(b){
+    b.classList.toggle('on', parseFloat(b.getAttribute('data-scale'))===currentScale());
+  });
+}
+function currentScale(){var s=parseFloat(LS.getItem('mn-scale')||'1');return (s&&s>0)?s:1;}
+function toggleTheme(){var on=body.classList.toggle('daylight');save('mn-theme',on?'light':'dark');paint();}
+if(reportBtn) reportBtn.addEventListener('click',function(e){e.preventDefault();toggleTheme();});
+if(siteBtn) siteBtn.addEventListener('click',function(e){e.preventDefault();toggleTheme();});
+document.querySelectorAll('[data-scale]').forEach(function(b){
+  b.addEventListener('click',function(e){e.preventDefault();
+    var s=parseFloat(b.getAttribute('data-scale'));save('mn-scale',s);
+    body.style.zoom=(s===1?'':s);paint();});
+});
+var I18N={ar:{"skip": "الانتقال إلى المحتوى", "menu": "القائمة", "home": "الرئيسية", "special": "التقارير الخاصة", "archive": "الأرشيف", "monthly": "اللوحة الشهرية", "cumulative": "السجل التراكمي", "sources": "المصادر والمراجع", "additions": "إضافات", "scale": "حجم الخط", "theme-dark": "المظهر: ليلي", "theme-light": "المظهر: نهاري", "print": "طباعة / PDF", "lang": "اللغة", "foot2-html": "تُحدَّث الصفحات آليًا مع كل إصدار · <a href=\"/#archive\">الأرشيف الكامل</a> · <a href=\"/feed.xml\">تغذية الإصدارات</a>", "no-en": "النسخة الإنجليزية لهذا الإصدار غير متاحة بعد."},en:{"skip": "Skip to content", "menu": "Menu", "home": "Home", "special": "Special reports", "archive": "Archive", "monthly": "Monthly dashboard", "cumulative": "Cumulative record", "sources": "Sources & references", "additions": "Additions", "scale": "Font size", "theme-dark": "Theme: night", "theme-light": "Theme: day", "print": "Print / PDF", "lang": "Language", "foot2-html": "Pages update automatically with every edition · <a href=\"/#archive\">Full archive</a> · <a href=\"/feed.xml\">Edition feed</a>", "no-en": "The English edition of this report is not available yet."}};
+function pageLang(){var lock=document.documentElement.getAttribute('data-lang');if(lock)return lock;var p=location.pathname;if(p.indexOf('/reports/en/')===0)return 'en';if(p.indexOf('/reports/')===0&&/^\d{4}-\d{2}-\d{2}\.html$/.test(p.slice(9)))return 'ar';return '';}
+function currentLang(){var pl=pageLang();if(pl)return pl;var l=LS.getItem('mn-lang');return (l==='en')?'en':'ar';}
+function i18nTxt(key){var d=I18N[currentLang()];return (d&&d[key])||I18N.ar[key]||'';}
+var _b=document.querySelector('.sn-name'), _s=document.querySelector('.sn-name em');
+var BRAND_TXT=_b?(_b.childNodes[0].nodeValue||'').trim():'', BRAND_SUB_TXT=_s?_s.textContent.trim():'';
+function paintLang(){
+  var l=currentLang();
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=i18nTxt(el.getAttribute('data-i18n'));if(v)el.textContent=v;});
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el){var v=i18nTxt(el.getAttribute('data-i18n-aria'));if(v)el.setAttribute('aria-label',v);});
+  var f1=document.querySelector('[data-i18n-html="foot1"]'); if(f1) f1.textContent=BRAND_TXT+' — '+BRAND_SUB_TXT;
+  var f2=document.querySelector('[data-i18n-html="foot2"]'); if(f2) f2.innerHTML=i18nTxt('foot2-html');
+  document.querySelectorAll('[data-lang]').forEach(function(b){b.classList.toggle('on', b.getAttribute('data-lang')===l);});
+  var rb=document.getElementById('btn-theme'), sb=document.getElementById('sn-theme');
+  var L=(l==='en'), light=body.classList.contains('daylight');
+  if(rb) rb.textContent = light ? (L?'Night mode':'النمط الليلي') : (L?'Day mode':'النمط النهاري');
+  if(sb) sb.textContent = light ? i18nTxt('theme-light') : i18nTxt('theme-dark');
+}
+function note(msg){
+  var n=document.getElementById('sn-lang-note');
+  if(!n){n=document.createElement('div');n.id='sn-lang-note';n.className='sn-lang-note no-print';document.body.appendChild(n);}
+  n.textContent=msg; n.style.display='block'; setTimeout(function(){n.style.display='none';},4600);
+}
+function routeLang(l){
+  var m=location.pathname.match(/^\/reports\/(en\/)?(\d{4}-\d{2}-\d{2})\.html$/);
+  if(!m) return;
+  var isEn=!!m[1], date=m[2];
+  if(l==='en'&&!isEn){
+    fetch('/reports/en/index.json?ts='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+      var list=(d&&d.dates)||[];
+      if(list.indexOf(date)>=0){ location.href='/reports/en/'+date+'.html'; } else { note(i18nTxt('no-en')); }
+    }).catch(function(){ note(i18nTxt('no-en')); });
+  } else if(l==='ar'&&isEn){
+    location.href='/reports/'+date+'.html';
+  }
+}
+function applyLang(l,go){
+  try{LS.setItem('mn-lang',l);}catch(e){}
+  var pl=pageLang();
+  if(pl&&l!==pl){ if(go) routeLang(l); return; }
+  var root=document.documentElement;
+  root.lang=(l==='en')?'en':'ar'; root.dir=(l==='en')?'ltr':'rtl';
+  body.classList.toggle('lang-en', l==='en');
+  paintLang(); if(go) routeLang(l);
+}
+document.querySelectorAll('[data-lang]').forEach(function(b){
+  b.addEventListener('click',function(e){e.preventDefault();applyLang(b.getAttribute('data-lang'),true);});
+});
+paintLang();
+paint();
+// رابط التخطي: أول عنوان ظاهر في الصفحة (أو المتن)، فلا يمرّ قارئ لوحة المفاتيح على الشريط كله في كل صفحة
+var skip=document.getElementById('sn-skip');
+if(skip){
+  var hs=[].slice.call(document.querySelectorAll('h1')).filter(function(h){return h.offsetParent!==null;});
+  var tg=hs[0]||document.querySelector('main,[role=main]');
+  if(tg){ if(!tg.id) tg.id='sn-main'; tg.setAttribute('tabindex','-1'); skip.setAttribute('href','#'+tg.id); }
+  else { skip.parentNode.removeChild(skip); }
+}
+// تذكّر آخر تقرير فُتح
+var p=location.pathname;
+if(p.indexOf('/reports/')===0){
+  var t=(document.title||'').split(/[|·]/)[0].trim();
+  save('mn-last',JSON.stringify({path:p,title:t,at:new Date().toISOString()}));
+}
+})();
+</script>
+<script>
+(function(){
+  var nav = document.querySelector('.site-nav'); if (!nav) return;
+  var btn = nav.querySelector('.sn-menu'), panel = nav.querySelector('.sn-panel');
+  var root = document.documentElement;
+  function measure(){
+    root.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+    var b = document.querySelector('.topbar');
+    root.style.setProperty('--bar-h', (b && getComputedStyle(b).display !== 'none' ? b.offsetHeight : 0) + 'px');
+  }
+  if (btn && panel){
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && nav.classList.contains('open')){
+        nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.focus();
+      }
+    });
+    nav.addEventListener('focusout', function(e){
+      if (nav.classList.contains('open') && !nav.contains(e.relatedTarget)){
+        nav.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(nav);
+  addEventListener('resize', measure); measure();
+})();
+</script>
+</body></html>
