@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Sun, 08 Nov 2026 03:32:33 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Sun, 08 Nov 2026 07:50:26 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://seawatch-live.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>08/11/2026 — مستوى التهديد: مرتفع</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-08.html</link>
+    <guid isPermaLink="false">mn-2026-11-08</guid><pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+    <description>أدرجت UKMTO في 07/11/2026 بلاغًا إرشاديًا عن حادث يشمل سفينة بضائع سائبة وقوات عسكرية شرق خورفكان؛ اسم السفينة والضرر وحالة الطاقم غير متاحة في مادة اليوم. · نقلت straits.live وقناة العربية رواية عن اصطدام ناقلتين بألغام بحرية واندلاع النار قرب مضيق هرمز؛ لم تثبت UKMTO أو IMO الأسماء أو الضرر أو الخسائر. · أوردت gCaptain نقلًا عن قول الجيش الأمريكي إنه عطّل سفينة شحن في خليج عُمان؛ لا هوية للسفينة أو تفاصيل الواقعة في مادة اليوم. · أوردت straits.live عنوانًا عن حادث على ساحل الإمارات، ونقلت قناة العربية إنقاذ 22 شخصًا من حريق بحري؛ لا تثبت المادة أنهما واقعة واحدة.</description>
+  </item>
   <item>
     <title>07/11/2026 — مستوى التهديد: مرتفع</title>
     <link>https://seawatch-live.pages.dev/reports/2026-11-07.html</link>
