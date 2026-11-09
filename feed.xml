@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Sun, 08 Nov 2026 09:02:44 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Mon, 09 Nov 2026 07:46:10 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://seawatch-live.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>09/11/2026 — مستوى التهديد: مرتفع جدًا</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-09.html</link>
+    <guid isPermaLink="false">mn-2026-11-09</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+    <description>أدرجت UKMTO عنوانًا عن نشاط مشبوه على بعد 8 أميال بحرية شمال غرب خصب؛ التفاصيل التشغيلية غير ظاهرة. · أدرجت UKMTO عنوانًا عن واقعة مصنفة هجومًا في مضيق هرمز؛ لا اسم سفينة أو نتيجة. · أظهرت القائمة تحديثًا لواقعة هجوم متأخرة الإبلاغ على بعد 16 ميلًا بحريًا شرق خصب. · أظهرت القائمة تحديثًا لواقعة تشمل سفينة بضائع سائبة وقوات عسكرية؛ لا حصيلة أو موقع كامل. · نقلت straits.live وISNA وMehr — العربي وJerusalem Post روايات ناقلات وألغام؛ بلا تأكيد ملاحي مستقل. · نقلت gCaptain وTradeWinds وSeatrade Maritime وLloyd's List وThe Maritime Executive وMarineLink عناوين عن سفن وحرائق وإجلاء 22 شخصًا.</description>
+  </item>
   <item>
     <title>08/11/2026 — مستوى التهديد: مرتفع</title>
     <link>https://seawatch-live.pages.dev/reports/2026-11-08.html</link>
