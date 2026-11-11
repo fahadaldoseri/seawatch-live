@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Wed, 11 Nov 2026 00:51:41 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Wed, 11 Nov 2026 12:12:12 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://seawatch-live.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>11/11/2026 — مستوى التهديد: مرتفع</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-11.html</link>
+    <guid isPermaLink="false">mn-2026-11-11</guid><pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <description>صنّفت تغذية UKMTO بلاغ 201-26 بتاريخ 10/11 ضمن Attack؛ موضعه غير مكتمل ونتيجته غير ظاهرة. · أظهر تحذير UKMTO 202-26 بتاريخ 11/11 نشاطًا مشبوهًا يشمل ناقلة في مضيق هرمز؛ الهوية والموضع التفصيلي والنتيجة غير ظاهرة. · لا تعرض مادة IMO إضافة أحدث من 29 سبتمبر، وتعرض صفحة MSCIO Recent Incidents (0). · لا توفر المواد الرسمية رقمًا لحركة السفن أو التكدس، ولا يصدر عنها حكم بتغير العبور.</description>
+  </item>
   <item>
     <title>10/11/2026 — مستوى التهديد: مرتفع جدًا</title>
     <link>https://seawatch-live.pages.dev/reports/2026-11-10.html</link>
