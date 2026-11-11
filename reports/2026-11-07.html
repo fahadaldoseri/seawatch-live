@@ -1208,10 +1208,10 @@ box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:90vw;text-align:center}
 </style></head>
 <body><nav class="site-nav no-print" aria-label="تنقل الموقع">
   <a class="sn-skip" href="#main" id="sn-skip" data-i18n="skip">الانتقال إلى المحتوى</a>
-  <div class="print-brand" aria-hidden="true"><img src="/assets/logo-header.png" width="34" height="34" alt="شعار مركز الوعي بالمجال البحري — مملكة البحرين"><span>مركز الوعي بالمجال البحري — تقارير أمن الملاحة — مملكة البحرين</span></div>
+  <div class="print-brand" aria-hidden="true"><img src="/assets/logo-header.png" width="34" height="34" alt="Maritime Domain Awareness Center logo — Kingdom of Bahrain"><span>مركز الوعي بالمجال البحري — تقارير أمن الملاحة — مملكة البحرين</span></div>
   <div class="sn-inner">
     <a class="sn-brand" href="/">
-      <img class="sn-logo" src="/assets/logo-header.png" width="40" height="40" alt="شعار مركز الوعي بالمجال البحري — مملكة البحرين" decoding="async">
+      <img class="sn-logo" src="/assets/logo-header.png" width="40" height="40" alt="Maritime Domain Awareness Center logo — Kingdom of Bahrain" decoding="async">
       <span class="sn-name">مركز الوعي بالمجال البحري <em>تقارير أمن الملاحة — مملكة البحرين</em></span>
     </a>
     <button type="button" class="sn-menu no-print" aria-expanded="false" aria-controls="sn-panel">
@@ -1670,6 +1670,11 @@ function applyLang(l,go){
 }
 document.querySelectorAll('[data-lang]').forEach(function(b){
   b.addEventListener('click',function(e){e.preventDefault();applyLang(b.getAttribute('data-lang'),true);});
+});
+// ك-228 (2026-11-11): زر «EN» كان يحمل data-go بلا مستمع نقر، فلم ينقل القارئ إلى
+// النسخة الإنجليزية. الربط هنا يسري على كل الصفحات لأن الشريط مشترك.
+document.querySelectorAll('[data-go]').forEach(function(b){
+  b.addEventListener('click',function(e){var u=b.getAttribute('data-go');if(u){e.preventDefault();location.href=u;}});
 });
 paintLang();
 paint();
