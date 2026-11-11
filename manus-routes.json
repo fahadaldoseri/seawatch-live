@@ -5,6 +5,10 @@
    "title": "الرئيسية والأرشيف"
   },
   {
+   "path": "/reports/2026-11-10.html",
+   "title": "تقرير 10/11/2026"
+  },
+  {
    "path": "/reports/2026-11-09.html",
    "title": "تقرير 09/11/2026"
   },
@@ -139,6 +143,10 @@
   {
    "path": "/additions.html",
    "title": "إضافات"
+  },
+  {
+   "path": "/about.html",
+   "title": "عن المنصة"
   },
   {
    "path": "/reports/special.html",
