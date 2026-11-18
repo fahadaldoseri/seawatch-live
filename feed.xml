@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Wed, 18 Nov 2026 15:18:43 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Wed, 18 Nov 2026 20:43:31 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://seawatch-live.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>18/11/2026 — مستوى التهديد: مرتفع جدًا</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-18.html</link>
+    <guid isPermaLink="false">mn-2026-11-18</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    <description>نشر UKMTO بلاغات عن إصابة ست ناقلات بين 10 و16 نوفمبر في الخليج العربي ومضيق هرمز. · أفاد تحديث البلاغ 208-26 بإصابة ثانية للناقلة قرب خصب، وبأن طاقمها لم يتم حصره. · صدر بلاغان عن زوارق مسلحة شرق سقطرى وجنوب غرب المكلا في 16 و17 نوفمبر. · أضاف سجل IMO أربع حوادث مؤكدة مؤرخة بين 10 و15 نوفمبر. · تتحدث عناوين نقلها موقع straits.live عن ألغام في مضيق هرمز فجر 18/11، ولم يصدر بلاغ رسمي يؤكد ذلك.</description>
+  </item>
+  <item>
+    <title>17/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-17.html</link>
+    <guid isPermaLink="false">mn-2026-11-17</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    <description>نشر UKMTO في 16/11 بلاغين عن إصابة ناقلتين في مضيق هرمز، أحدهما التحذير 208-26 عن ناقلة تعطلت قرب خصب. · أبلغ ربان ناقلة في 16/11 عن اقتراب سفينة أم وزورق عليه أربعة مسلحين، على بعد 430 ميلًا بحريًا شرق سقطرى (206-26). · تتحدث صحيفة Jerusalem Post عن ارتطام ناقلات بألغام في مضيق هرمز، ولم يصدر بلاغ رسمي يؤكد ذلك حتى 0340Z.</description>
+  </item>
+  <item>
+    <title>16/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-16.html</link>
+    <guid isPermaLink="false">mn-2026-11-16</guid><pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <description>نقل UKMTO عن سلطات الملاحة الهندية هجومًا على ناقلة في الخليج العربي في 15/11، والطاقم سالم. · أدرجت المنظمة البحرية الدولية (IMO) الناقلة AL DHANNAH (IMO 9783734) متضررة في الخليج العربي بتاريخ 15/11، بلا تلوث. · يتحدث موقع Seatrade Maritime عن إصابة ناقلتين وعن ادعاء إيراني بغرق ناقلة عملاقة، ولم يصدر بلاغ رسمي يؤكد الغرق حتى 0340Z.</description>
+  </item>
+  <item>
+    <title>15/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-15.html</link>
+    <guid isPermaLink="false">mn-2026-11-15</guid><pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <description>لا تظهر في المادة الرسمية المحفوظة واقعة أمنية جديدة بتاريخ وقوع 14/11/2026. · أعلن المتحدث العسكري للحكومة اليمنية في 14/11 استمرار عملية «فجر اليمن» ضد الحوثيين، وذكر تهديدهم لأمن الملاحة. · كُتب هذا الإصدار استدراكيًا في 18/11، فلا يُفهم خلو اليوم من الوقائع بوصفه دليلًا على هدوء الممر.</description>
+  </item>
+  <item>
+    <title>14/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-14.html</link>
+    <guid isPermaLink="false">mn-2026-11-14</guid><pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <description>نشر UKMTO بلاغًا متأخرًا جرى التحقق منه عن ناقلة أصابها مقذوف في الخليج العربي في 13/11، والطاقم كله سالم. · أدرجت المنظمة البحرية الدولية (IMO) الناقلة DAR SALWA (IMO 9534779) متضررة في مضيق هرمز بتاريخ 13/11، بلا تلوث. · لا تثبت المادة الرسمية أن البلاغ والصف يخصان السفينة نفسها، لاختلاف الموضع المذكور في كل منهما.</description>
+  </item>
+  <item>
+    <title>13/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://seawatch-live.pages.dev/reports/2026-11-13.html</link>
+    <guid isPermaLink="false">mn-2026-11-13</guid><pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <description>لا تظهر في المادة الرسمية المحفوظة واقعة أمنية جديدة بتاريخ وقوع 12/11/2026. · نشر مركز المعلومات البحرية المشترك (JMIC) في 12/11 خبر ورشة لأمن الملاحة الإقليمي شاركت فيها 13 دولة مع القوة 154. · كُتب هذا الإصدار استدراكيًا في 18/11، فلا يُفهم خلو اليوم من الوقائع بوصفه دليلًا على هدوء الممر.</description>
+  </item>
   <item>
     <title>12/11/2026 — مستوى التهديد: متوسط</title>
     <link>https://seawatch-live.pages.dev/reports/2026-11-12.html</link>
