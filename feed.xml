@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Thu, 19 Nov 2026 05:36:41 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Fri, 20 Nov 2026 05:18:50 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://mda-bh.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>20/11/2026 — مستوى التهديد: متوسط</title>
+    <link>https://mda-bh.pages.dev/reports/2026-11-20.html</link>
+    <guid isPermaLink="false">mn-2026-11-20</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    <description>لم يصدر عن UKMTO بلاغ جديد عن إصابة سفينة بعد بلاغي 18/11 شمال خصب. · وزّع UKMTO في 19/11 التحديث 115 من تنبيه JMIC الإرشادي، ونصه غير متاح في المصادر المفحوصة. · نقلت وكالة إرنا عن الحرس الثوري اندلاع حريق في ناقلتين عملاقتين بعد ارتطامهما بألغام، ولم يصدر بلاغ رسمي يؤكد ذلك. · نقل موقع TradeWinds تحذير التحالف من مواقع حوثية تتيح استهداف السفن قرب عدن.</description>
+  </item>
   <item>
     <title>19/11/2026 — مستوى التهديد: مرتفع جدًا</title>
     <link>https://mda-bh.pages.dev/reports/2026-11-19.html</link>
