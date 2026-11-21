@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><lastBuildDate>Fri, 20 Nov 2026 16:06:35 +0000</lastBuildDate>
+<rss version="2.0"><channel><lastBuildDate>Sat, 21 Nov 2026 02:40:27 +0000</lastBuildDate>
   <title>مركز الوعي بالمجال البحري — تقارير أمن الملاحة</title>
   <link>https://mda-bh.pages.dev/</link>
   <description>إصدار يومي لأمن الملاحة في مضيق هرمز والخليج العربي وبحر العرب والبحر الأحمر</description>
   <language>ar</language>
+  <item>
+    <title>21/11/2026 — مستوى التهديد: مرتفع جدًا</title>
+    <link>https://mda-bh.pages.dev/reports/2026-11-21.html</link>
+    <guid isPermaLink="false">mn-2026-11-21</guid><pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <description>أعلن UKMTO في التحذير 214-26 إصابة ناقلة بمقذوف على بعد 8 أميال بحرية شمال خصب واشتعال النار فيها دون إصابات. · أعلن UKMTO في التحذير 213-26 اقتراب قارب فيه 6 مسلحين من سفينة بضائع جنوب غرب المكلا وتبادل إطلاق النار دون أضرار. · نقل موقع gCaptain عن رويترز تحذير الحوثيين لشركات الشحن بإخراج سفنها من الموانئ السعودية على البحر الأحمر.</description>
+  </item>
   <item>
     <title>20/11/2026 — مستوى التهديد: متوسط</title>
     <link>https://mda-bh.pages.dev/reports/2026-11-20.html</link>
